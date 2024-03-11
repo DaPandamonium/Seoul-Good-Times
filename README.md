@@ -25,9 +25,4 @@ This project aims to:
 To view the Seoul Good Eats website:
 1. Clone this repository to your local machine.
 2. Navigate to the project directory.
-3. Open `restaurant_menu.html` in your web browser.
-
-```bash
-git clone https://github.com/yourusername/seoul-good-eats-codédex-final.git
-cd seoul-good-eats-codédex-final
-# Open `restaurant_menu.html` in your browser
+3. Open `index.html` in your web browser.
