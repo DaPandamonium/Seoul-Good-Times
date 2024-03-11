@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seoul Good Eats</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f0f0f0; color: #333; }
+        header { background-color: #ff4757; color: #fff; padding: 20px 10px; text-align: center; }
+        #header-img { max-width: 200px; height: auto; display: block; margin: 0 auto; }
+        h1 { color: #ffeaa7; }
+        nav a { color: #fff; text-decoration: none; margin: 0 10px; font-weight: bold; }
+        nav a:hover { color: #ffeaa7; }
+        main { padding: 20px; }
+        .menu-item { background-color: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-bottom: 20px; padding: 20px; border-radius: 8px; }
+        .menu-item img {
+            width: 50%;
+            max-width: 75px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border-radius: 100px;
+        }
+        .menu-item h3 { color: #ff4757; }
+        .menu-item p { font-size: 16px; }
+        .menu-item p i { font-style: italic; }
+        .order-form { background-color: #ffffff; padding: 20px; margin-top: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); border-radius: 8px; }
+        .order-form label, .order-form input, .order-form textarea { display: block; width: 100%; }
+        .order-form input, .order-form textarea { padding: 10px; margin-top: 5px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 4px; }
+        .order-form input[type="submit"] { background-color: #ff4757; color: white; cursor: pointer; border: none; }
+        .order-form input[type="submit"]:hover { background-color: #ff6b81; }
+        footer { background-color: #2d3436; color: #fff; text-align: center; padding: 20px; margin-top: 20px; }
+        #contact-us {
+            background-color: #ffffff;
+            padding: 20px;
+            margin-top: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+#contact-us form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#contact-us input[type="text"],
+#contact-us input[type="email"],
+#contact-us textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#contact-us input[type="submit"] {
+    display: block;
+    width: auto;
+    padding: 10px 20px;
+    background-color: #ff4757;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#contact-us input[type="submit"]:hover {
+    background-color: #ff6b81;
+}
+
+    </style>    
+</head>
+<body>
+    <header>
+        <a href="restaurant.html">
+            <img id="header-img" src="./assets/seoul1.2.png" alt="Seoul Good Eats Logo">
+        </a>
+        <h1>Seoul Good Eats</h1>
+        <nav>
+            <a href="restaurant.html#menu">Menu</a> | 
+            <a href="restaurant.html#order-form">Place Your Order</a> |
+            <a href="restaurant.html#contact-us">Contact Us</a> |
+            <a href="about-seoul.html">About</a>
+        </nav>
+    </header>
+    
+
+    <main>
+        <section id="menu">
+            <h2>Menu</h2>
+            <article class="menu-item">
+                <img src="./assets/kimchi-jjigae.jpg" alt="Kimchi Jjigae">
+                <h3>Kimchi Jjigae</h3>
+                <p>Rich and hearty kimchi stew perfect for any meal. <i>12.99€</i></p>
+            </article>
+            <article class="menu-item">
+                <img src="./assets/bulgogi2.jpg" alt="Bulgogi">
+                <h3>Bulgogi</h3>
+                <p>Succulent slices of marinated beef grilled to perfection. <i>15.99€</i></p>
+            </article>
+            <article class="menu-item">
+                <img src="./assets/bibimbap.jpg" alt="Bibimbap">
+                <h3>Bibimbap</h3>
+                <p>A colorful bowl of mixed rice, vegetables, meat, and egg. <i>11.99€</i></p>
+            </article>
+        </section>
+
+        <section id="order-form" class="order-form">
+            <h2>Place Your Order</h2>
+            <form action="submit-order.html" method="POST">
+                <label for="kimchi-jjigae-quantity">Kimchi Jjigae Quantity:</label>
+                <input type="number" id="kimchi-jjigae-quantity" name="kimchi-jjigae-quantity" min="0" value="0">
+
+                <label for="bulgogi-quantity">Bulgogi Quantity:</label>
+                <input type="number" id="bulgogi-quantity" name="bulgogi-quantity" min="0" value="0">
+
+                <label for="bibimbap-quantity">Bibimbap Quantity:</label>
+                <input type="number" id="bibimbap-quantity" name="bibimbap-quantity" min="0" value="0">
+
+                <label>Sides & Add-ons:</label>
+                <div>
+                    <input type="checkbox" id="side-kimchi" name="side-kimchi">
+                    <label for="side-kimchi">Extra Kimchi</label>
+                    
+                </div>
+                <div>
+                    <input type="checkbox" id="rice" name="rice">
+                    <label for="rice">Extra Rice</label>
+                </div>
+
+                <label for="special-requests">Special Requests:</label>
+                <textarea id="special-requests" name="special-requests" rows="4" placeholder="Any special requests?"></textarea>
+
+                <input type="submit" value="Go To Checkout">
+            </form>
+        </section>
+
+        <section id="contact-us">
+            <h2>Contact Us</h2>
+            <p>We'd love to hear from you! Visit us at:</p>
+            <p><strong>123 Seoul Street, Foodie Town, Korea</strong></p>
+            <p>Or drop us a message below:</p>
+            
+            <form action="submit-contact.html" method="POST">
+                <label for="contact-name">Your Name:</label>
+                <input type="text" id="contact-name" name="contact-name" required>
+        
+                <label for="contact-email">Your Email:</label>
+                <input type="email" id="contact-email" name="contact-email" required>
+        
+                <label for="contact-message">Your Message:</label>
+                <textarea id="contact-message" name="contact-message" rows="4" required></textarea>
+        
+                <input type="submit" value="Send Message">
+            </form>
+        </section>
+        
+    </main>
+
+    <footer>
+        <p>Made with love by <a href="https://www.codedex.io/@DaPanda" target="_blank">DaPanda</a></p>
+    </footer>
+</body>
+</html>
+
